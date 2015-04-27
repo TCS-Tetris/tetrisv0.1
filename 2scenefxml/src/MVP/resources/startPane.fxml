@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="view.startPaneController">
+   <children>
+      <Separator fx:id="startSeparator1" orientation="VERTICAL" prefHeight="110.0" />
+      <Button fx:id="newGameButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="90.0" text="New Game" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Separator fx:id="startSeparator2" orientation="VERTICAL" prefHeight="200.0" />
+      <Button fx:id="exitButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exitApp" prefHeight="50.0" prefWidth="90.0" text="Exit" textAlignment="CENTER">
+         <VBox.margin>
+            <Insets bottom="110.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
