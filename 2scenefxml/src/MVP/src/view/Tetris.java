@@ -1,5 +1,6 @@
 package view;
 
+import model.Model;
 import presenter.MainPresenter;
 
 /**
