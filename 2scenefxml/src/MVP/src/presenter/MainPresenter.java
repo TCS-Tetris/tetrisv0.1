@@ -22,9 +22,16 @@ public class MainPresenter extends Observable implements Observer{
         this.state = state;
         if(state.equals("game"))
         {
-            this.model=new Model();
-            this.timer=new Timer(model);
+            model=new Model();
+            timer=new Timer(model);
             model.addObserver(this);
+        }
+        else if(model!=null && timer!=null)
+        {
+            model.deleteObserver(timer);
+            model.deleteObserver(this);
+            model=null;
+            timer=null;
         }
         setChanged();
         notifyObservers();
