@@ -20,14 +20,16 @@ public class MainPresenter extends Observable implements Observer{
 
     public void setState(String state) {
         this.state = state;
-        if(state.equals("game"))
+        if(state!=null && state.equals("game"))
         {
             model=new Model();
             timer=new Timer(model);
             model.addObserver(this);
+            timer.startMovingDown();
         }
         else if(model!=null && timer!=null)
         {
+            timer.gameOn=false;
             model.deleteObserver(timer);
             model.deleteObserver(this);
             model=null;
