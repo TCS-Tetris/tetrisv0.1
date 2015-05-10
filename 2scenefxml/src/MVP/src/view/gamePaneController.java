@@ -110,7 +110,7 @@ public class gamePaneController extends Controller{
         //System.out.println("update1");
         if(presenter.getState() != null)
         {
-            boolean [][] MyMap = presenter.giveMeMap();
+            char [][] MyMap = presenter.giveMeMap();
 
 
             //canvas ma wymiary 350 na 300 w tym momencie
@@ -146,7 +146,7 @@ public class gamePaneController extends Controller{
             {
                 for(int j = 0; j < 10; j++)
                 {
-                    if(MyMap[i][j] == true)
+                    if(MyMap[i][j] !='.')
                     {
                         //System.out.println("to cos jest:" + i + " " + j);
                         gc.fillRoundRect((j)*30,i*17 , 30, 17, 10, 10);
