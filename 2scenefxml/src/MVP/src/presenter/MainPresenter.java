@@ -55,9 +55,13 @@ public class MainPresenter extends Observable implements Observer{
         model.moveRight();
     }
 
+    public void moveDown() { model.moveDown();}
+
+    public void turnBlock() { model.turnBlock();}
 
     @Override
     public void update(Observable o, Object arg) {
+        setChanged();
         notifyObservers();
     }
 }
