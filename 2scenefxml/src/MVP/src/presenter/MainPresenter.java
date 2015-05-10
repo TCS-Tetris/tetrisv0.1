@@ -43,7 +43,7 @@ public class MainPresenter extends Observable implements Observer{
         System.exit(0);
     }
 
-    public boolean[][] giveMeMap(){
+    public char[][] giveMeMap(){
         return model.giveMeMap();
     }
 
